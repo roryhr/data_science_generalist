@@ -20,6 +20,18 @@ class Box:
         return f"Box({self.volume_capacity}, {self.weight_capacity})"
 
     def add(self, part):
+        """Add part to current box
+
+        Parameters
+        ----------
+        part : Part
+            Part to add to Box
+
+        Returns
+        -------
+        added : bool
+            Was the part added?
+        """
         added = self.can_add(part)
         if added:
             self._add(part)
